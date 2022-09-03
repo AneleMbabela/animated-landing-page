@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>creative Landing Page Design with Animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="overlay">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>  
+
+<main>
+    <header>
+        <ul>
+            <li><a href="#">Man</a>
+                <div class="megamenu">
+                    <ul>
+                        <li><a href="#">Shirts <span>+</span></a></li>
+                        <li><a href="#">Jeans <span>+</span></a></li>
+                        <li><a href="#">Shoes <span>+</span></a></li>
+                        <li><a href="#">Boots <span>+</span></a></li>
+                        <li><a href="#">Jackets <span>+</span></a></li>
+                        <li><a href="#">Sweaters <span>+</span></a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="#">Woman</a>
+                <div class="megamenu">
+                    <ul>
+                        <li><a href="#">Shirts <span>+</span></a></li>
+                        <li><a href="#">Jeans <span>+</span></a></li>
+                        <li><a href="#">Shoes <span>+</span></a></li>
+                        <li><a href="#">Boots <span>+</span></a></li>
+                        <li><a href="#">Jackets <span>+</span></a></li>
+                        <li><a href="#">Sweaters <span>+</span></a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <div class="logo">
+            <img src="images/logo.png" alt="">
+        </div>
+        <ul>
+            <li><a href="#">Coupons</a></li>
+            <li><a href="#">Offers</a></li>
+        </ul>
+    </header>
+
+    <div class="content">
+        <div class="item">
+            <img src="images/4.jpg" alt="">
+            <div class="text">
+                <div class="text-inner">
+                    <h3>Fashionable Shoes</h3>
+                    <a href="#">Explore <span>+</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/3.jpg" alt="">
+            <div class="text">
+                <div class="text-inner">
+                    <h3>Fashionable Shoes</h3>
+                    <a href="#">Explore <span>+</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/2.jpg" alt="">
+            <div class="text">
+                <div class="text-inner">
+                    <h3>Fashionable Shoes</h3>
+                    <a href="#">Explore <span>+</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/1.jpg" alt="">
+            <div class="text">
+                <div class="text-inner">
+                    <h3>Fashionable Shoes</h3>
+                    <a href="#">Explore <span>+</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+
+<!-- Anime JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script>
+
+anime({
+    targets: '.overlay div',
+    scaleX: 0,
+    duration: 1500,
+    delay: anime.stagger(200, {start: 1000}),
+    easing: 'easeOutSine'
+});
+anime({
+    targets: '.content .item',
+    opacity: [0, 1],
+    duration: 300,
+    delay: anime.stagger(500),
+    easing: 'easeOutSine'
+});
+anime({
+    targets: '.overlay',
+    scaleX: 0,
+    delay: 3500,
+    easing: 'easeOutSine'
+});
+anime({
+    targets: 'header',
+    translateY: [-100, 0],
+    opacity: [0, 1],
+    duration: 1000,
+    delay: 3000,
+    easing: 'easeOutSine',
+});
+
+</script>   
+</body>
+</html>
